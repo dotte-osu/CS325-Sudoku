@@ -1,0 +1,66 @@
+body{
+     text-align:center;
+}
+h1{
+     margin:auto;
+     padding: 10px;
+     text-align:center;
+}
+
+table{
+     border-spacing:0;
+     vertical-align:middle;
+     border: solid 3px #000000;
+     margin:auto;
+}
+tr {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+td{
+     border: solid 1px rgb(119, 216, 110) ;
+     width :30px;
+     height:30px;
+}
+
+input {
+     font-size:large;
+     text-align:center;
+	vertical-align:middle;
+	border:0 solid black;
+	height:30px;
+	width:30px;
+	margin:0;
+     
+}
+
+.boldRight{
+     border-right: solid 1px black;
+}
+.boldLeft{
+     border-left: solid 1px black;
+}
+
+.boldBottom{
+     border-bottom: solid 1px black;
+}
+
+.boldTop{
+     border-top: solid 1px black;
+}
+
+
+.requestArea{
+     display: block;
+     padding: 20px;
+     margin: auto;
+     width:50%;
+}
+
+.box{
+     margin: auto;
+     width:400px;
+     height:50%;
+     border: solid 1px black;
+}

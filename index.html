@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <h1>Sudoku Puzzle</h1>
+
+    <div class="container">
+
+        <div class="formArea">
+            <form name="sudokuform">
+                <table id="basetable">
+                    <!--first row-->
+                    <tr>
+                        <td><input  type="text" style="font-weight:bold" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                    </tr>
+                    <!--second row-->
+                    <tr>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input type="text" /></td>
+                        <td><input  type="text" /></td>
+                    </tr>
+                    <!--3rd row-->
+                    <tr>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldRight boldBottom"><input  type="text" /></td>
+                        <td class="boldLeft boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldRight boldBottom"><input  type="text" /></td>
+                        <td class="boldLeft boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                    </tr>
+                    <!--4th row-->
+                    <tr>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldRight boldTop"><input type="text" /></td>
+                        <td class="boldLeft boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldRight boldTop"><input  type="text" /></td>
+                        <td class="boldLeft boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                    </tr>
+                    <!--5th row-->
+                    <tr>
+                        <td><input type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                    </tr>
+                    <!--6th row-->
+                    <tr>
+                        <td class="boldBottom"><input type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldRight boldBottom"><input  type="text" /></td>
+                        <td class="boldLeft boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input type="text" /></td>
+                        <td class="boldRight boldBottom"><input  type="text" /></td>
+                        <td class="boldLeft boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                        <td class="boldBottom"><input  type="text" /></td>
+                    </tr>
+                    <!--7th row-->
+                    <tr>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldRight boldTop"><input  type="text" /></td>
+                        <td class="boldLeft boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldRight boldTop"><input  type="text" /></td>
+                        <td class="boldLeft boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                        <td class="boldTop"><input  type="text" /></td>
+                    </tr>
+                    <!--8th row-->
+                    <tr>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                    </tr>
+                    <!--9th row-->
+                    <tr>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td class="boldRight"><input  type="text" /></td>
+                        <td class="boldLeft"><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                        <td><input  type="text" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="requestArea">
+            <button onclick="createPuzzle()">Create Puzzle</button>
+            <button onclick="verifyAnswer(null)">Check Your Answer</button>
+            <button onclick="displayAnswer()">Solve!</button>
+        </div>
+
+        <div class="box">
+            <p id="showMessage">Click "Create Puzzle" to start the game!</p>
+        </div>
+
+    </div>
+
+
+    
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
